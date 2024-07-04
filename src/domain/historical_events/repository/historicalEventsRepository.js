@@ -9,3 +9,12 @@ exports.getHistoricalEvents = (ocurrence) => {
     }
     return filtered_events
 }
+
+
+exports.getsearchEvent=(inputEvent)=>{
+    const result=[]
+    historicalDataset.forEach((eventObject) => {
+      if(inputEvent === eventObject.ocurrence) result.push(eventObject)  
+    })
+    return result
+}
